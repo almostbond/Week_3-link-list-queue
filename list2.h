@@ -1,33 +1,46 @@
 
 
-struct node {
-    int value;
-    node* next;
-    node* previous;
+
+
+class List {
+
+    private:
+        struct node {
+            int value;
+            node* next;
+
+        };
+
+        typedef struct node* nodeptr;
+
+        nodeptr head;
+        nodeptr tail;
+        nodeptr current;
+        nodeptr temp;
+
+    public:
+        List();
+
+        void push(int add_val);
+    
+        int pop();
+        void peek();
+        void print_list();
+        void menu();
+
+
 };
 
 
+class Test: public List{
 
+    public:
+        Test();
 
-
-
-struct List {
-
-    node* head;
-    node* tail;
-    node* current;
-    node* temp;
-
-    List();
-
-    void push(int add_val);
-    void insert(int value, int pos);
-    void pop();
-    void peek();
-    void print_list();
-
+        void test_1();
+        void test_2();
+        //void test_3();
 
 };
-
 
 
